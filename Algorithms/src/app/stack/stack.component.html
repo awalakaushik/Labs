@@ -1,0 +1,27 @@
+    
+    <section>
+        <div>
+            <input type="text" [(ngModel)]="stackSize">
+            <button (click)="onSetMaxStackSizeButtonClicked($event, stackSize)">Set Max Stack Size</button>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="pushElement" name="pushElement" id="pushElementInput">
+            <button (click)="onPushButtonClicked($event, pushElement)">Push</button>
+        </div>
+        <div>
+            <button (click)="onPopButtonClicked($event)">Pop</button>
+        </div>
+    </section>
+    
+    <section>
+        <h1>Stack Statistics</h1>
+        <div>
+            <span>Max Size: {{stack.maxSize}}</span>
+            <span>Current Size: {{stack.currentSize}}</span>
+            <div>
+                <span>Stack Elements</span>
+                <span>{{stack.viewElements}}</span>
+            </div>
+            {{errorMessage}}
+        </div>
+    </section>
